@@ -35,16 +35,26 @@ function picas_y_fijas() {
 	picas = 0;
 	fijas = 0;
 	//Validating length of input number
-	if (input_number.length != 4) {
-		return console.log("El numero de digitos debe ser 4");
+	if (input_number.length != 4 || !numero_valido()) {
+		$('#error').addClass('text-validation');
 	} else {
+		$('#error').removeClass('text-validation');
 		for(i = 0; i < 4; i++) {
 			//Validating if random include a digit of input number
 			if (random.includes(input_number[i])) {
 				//Pica or Fija
 				(random[i] == input_number[i]) ? fijas += 1 : picas += 1;
 			}
-		}
-		console.log("Picas: "+ picas +", Fijas: " + fijas);
+		}	
+		$('#body').append('<tr><td>'+ $('#number').val() +'</td><td>'+ picas +'</td><td>'+ fijas +'</td></tr>');
+		$('#number').val('');
 	}
+}
+
+function numero_valido() {
+	var number = $('#number').val();
+	for(i = 0; i < 4; i++) {
+		if (number.indexOf(number[i]) != number.lastIndexOf(number[i])) return false;
+	}
+	return true;
 }
