@@ -11,3 +11,7 @@ span.text-validation {
 .input-validation {
 	background-color: red;
 }
+
+table tr, th, td{
+	text-align: center
+}
