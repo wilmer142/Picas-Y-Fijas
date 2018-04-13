@@ -1,0 +1,17 @@
+body {
+	padding:10px;
+	text-align: center;
+}
+
+span.text-validation {
+	color: orange;
+	font-weight: bold;
+}
+
+.input-validation {
+	background-color: red;
+}
+
+table tr, th, td{
+	text-align: center
+}
