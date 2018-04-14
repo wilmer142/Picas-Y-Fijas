@@ -2,12 +2,31 @@
 <html>
 <head>
 	<title>Picas y Fijas</title>
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
+	<div class="modal fade" tabindex="-1" role="dialog" id="congratModal">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h1>Felicidades!</h1>
+	      </div>
+	      <div class="modal-body">
+	        <p>Acertaste el número</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button class="btn btn-warning" data-dismiss="modal">Salir</button>
+	        <button class="btn btn-primary" id="volverModal">Volver a Jugar</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4">
 			<h1>Picas y Fijas</h1>
