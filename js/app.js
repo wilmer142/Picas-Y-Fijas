@@ -48,8 +48,13 @@ function picas_y_fijas() {
 		}	
 		$('#body').append('<tr><td>'+ $('#number').val() +'</td><td>'+ picas +'</td><td>'+ fijas +'</td></tr>');
 		$('#number').val('');
+		if (fijas == 4) $('#congratModal').modal('show');
 	}
 }
+
+$('#volverModal').click(function(){
+	location.reload();
+});
 
 function numero_valido() {
 	var number = $('#number').val();
